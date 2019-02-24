@@ -17,7 +17,7 @@
     "react-dom": "^16.8.1",
     "axios": "^0.18.0",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
+    "webpack-cli": "^3.2.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

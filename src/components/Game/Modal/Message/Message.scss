@@ -1,0 +1,20 @@
+.message {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    button {
+        width: 100%;
+        border: 1px solid;
+        font-size: 1.2em;
+        height: 2em;
+        cursor: pointer;
+        &:hover {
+            color: white;
+            background: red;
+        }
+    }
+    img {
+        width: 100%
+    }
+}

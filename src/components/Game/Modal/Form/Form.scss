@@ -1,0 +1,25 @@
+form.create-game-form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    box-shadow: #000 0 2px 18px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: purple;
+    padding: 20px;
+    max-width: 400px;
+    min-width: 200px;
+    margin: auto;
+    label {
+        color: white;
+        width: 100%;
+        display: flex;
+        input, select {
+            flex-basis: 50%;
+        }
+        b {
+            text-align: left;
+            flex-basis: 50%;
+        }
+    }
+}

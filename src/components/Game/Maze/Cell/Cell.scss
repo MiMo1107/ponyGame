@@ -1,0 +1,28 @@
+$border-style: 1px solid #fe2691;
+
+.cell {
+    background: #87efc3;
+    height: 30px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: contain;
+    &.north {
+        border-top: $border-style;
+    }
+    &.west {
+        border-left: $border-style;
+    }
+    &.east {
+        border-right: $border-style;
+    }
+    &.south {
+        border-bottom: $border-style;
+    }
+    &.end {
+        background-image: url(/src/assets/img/rainbow.gif);
+    }
+    &.domokun {
+        background-image: url(/src/assets/img/domokun.gif);
+    }
+}

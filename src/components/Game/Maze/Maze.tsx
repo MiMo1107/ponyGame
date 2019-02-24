@@ -32,7 +32,7 @@ export default class Maze extends React.Component<IProps> {
          }
 
          if (pony.indexOf(index) > -1) {
-           cellStyle.backgroundImage = `url(src/assets/img/ponies/${ponyId}.gif)`;
+           cellStyle.backgroundImage = `url(/assets/img/ponies/${ponyId}.gif)`;
          }
 
          return (<Cell

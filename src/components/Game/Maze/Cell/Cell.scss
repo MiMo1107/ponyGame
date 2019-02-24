@@ -5,7 +5,7 @@ $border-style: 1px solid #fe2691;
     height: 30px;
     box-sizing: border-box;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: contain;
     &.north {
         border-top: $border-style;
@@ -20,9 +20,9 @@ $border-style: 1px solid #fe2691;
         border-bottom: $border-style;
     }
     &.end {
-        background-image: url(/src/assets/img/rainbow.gif);
+        background-image: url(/assets/img/rainbow.gif);
     }
     &.domokun {
-        background-image: url(/src/assets/img/domokun.gif);
+        background-image: url(/assets/img/domokun.gif);
     }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "pony-game",
+  "scripts": {
+    "postdeploy": "npm run start-prod"
+  },
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

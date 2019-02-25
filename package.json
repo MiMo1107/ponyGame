@@ -4,7 +4,7 @@
   "description": "Pony game based on Trust Pilot API",
   "license": "MIT",
   "scripts": {
-    "copy-assets": "mkdir dist/ && mkdir dist/assets/ && ncp src/assets/ dist/assets/",
+    "copy-assets": "mkdir dist/ && mkdir dist/assets/ && ncp assets/ dist/assets/",
     "build": "npm run clean-dist && npm run copy-assets && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rm -f -r -d dist",
     "lint": "tslint './src/**/*.ts*' --format stylish --force",
@@ -30,6 +30,7 @@
     "react-hot-loader": "^4.6.5",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "tocca": "^2.0.3",
     "typescript": "^3.3.3",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",

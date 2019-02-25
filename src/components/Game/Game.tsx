@@ -1,4 +1,5 @@
 import * as React from 'react';
+import 'tocca/Tocca.min.js';
 import { getMaze, move } from '../../api';
 import './Game.scss';
 import Maze from './Maze/Maze';
@@ -62,9 +63,12 @@ export default class Game extends React.Component<{}, IState> {
         direction = 'south';
         break;
     }
+    return direction;
+  }
 
+  public movePony = (direction: string) => {
     if (direction && this.state.mazeId) {
-      move(this.state.mazeId, direction).then((data: {state: string}) => {
+      move(this.state.mazeId, direction).then((data: { state: string }) => {
         if (data.state === 'over' || data.state === 'won') {
           this.setState({ done: true, message: data['state-result'], image: data['hidden-url'] });
         } else if (data.state === 'active' && data['state-result'] === 'Move accepted') {
@@ -101,10 +105,18 @@ export default class Game extends React.Component<{}, IState> {
 
   public componentDidMount() {
     document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('swipeup', () => this.movePony('south'));
+    document.addEventListener('swipedown', () => this.movePony('north'));
+    document.addEventListener('swiperight', () => this.movePony('west'));
+    document.addEventListener('swipeleft', () => this.movePony('east'));
   }
 
   public componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('swipeup', () => this.movePony('south'));
+    document.removeEventListener('swipedown', () => this.movePony('north'));
+    document.removeEventListener('swiperight', () => this.movePony('west'));
+    document.removeEventListener('swipeleft', () => this.movePony('east'));
   }
 
   public render() {
